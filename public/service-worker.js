@@ -62,8 +62,6 @@ self.addEventListener('install', (evt) => {
 self.addEventListener('activate', (evt) => {
   console.log('[ServiceWorker] Activate');
   // CODELAB: Remove previous cached data from disk.
-  console.log('here');
-
   evt.waitUntil(
     caches.keys().then((keyList) => {
       console.log(keyList);
